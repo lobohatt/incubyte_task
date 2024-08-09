@@ -7,7 +7,6 @@ const Home = () => {
 
     return(
         <div>
-            working
             <p>{(calculator.add('1'))}</p>
         </div>
     )

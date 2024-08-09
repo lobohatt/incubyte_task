@@ -1,0 +1,19 @@
+.header-banner {
+    padding: 15px 0;
+    height: 200px;
+    background-color: rgb(239, 220, 241);
+    width: 100%;
+  }
+                          
+  .header-cont{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+  }
+
+  .header-cont img {
+    height: 80px;
+    margin: auto;
+  }                                     
+
+                                  
