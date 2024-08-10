@@ -32,9 +32,9 @@ const Home = () => {
     return(
         <div className="home-banner">
             <div className="formbanner">
-             <form method="post">
+             <form onSubmit={onhandleSubmit}>
         <input type="text" name="userinput" placeholder="Enter the string" required="required" onChange={onhandleChange} value={userData.userinput} />
-        <button type="button" onClick={onhandleSubmit}>Calculate</button>
+        <button type="submit" >Calculate</button>
     </form>
             </div>
         </div>
