@@ -21,7 +21,7 @@ const Home = () => {
         console.log(userData.userinput)
         Swal.fire({
             title: `Output : ${calculator.add(`${userData.userinput}`)}`,
-            icon: 'success',
+            icon:  calculator.add(`${userData.userinput}`).toString().includes("negative") ? "error" : "success",
             confirmButtonText: 'Want to Try another'
           })
           setuserData({userinput:''})

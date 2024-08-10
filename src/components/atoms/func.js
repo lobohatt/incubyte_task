@@ -21,7 +21,7 @@ Stringcal.prototype.add = function(string_numbers) {
     }
 
    
-    numbers = numbers.replace(/\D|\n/g, ",").replace(/^,|,$/g, "");
+    numbers = numbers.replace(/[^-\d]/g, ",").replace(/^,|,$/g, "");
     console.log("After newline replacement:", numbers); 
 
     
