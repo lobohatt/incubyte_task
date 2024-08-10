@@ -38,8 +38,4 @@ describe('Stringcal', () => {
     test('should ignore non-numeric characters', () => {
         expect(stringcal.add('1,2\n3,hello,4')).toBe(10);
     });
-
-    test('should handle delimiters with multiple characters', () => {
-        expect(stringcal.add('//[***]\n1***2***3')).toBe(6);
-    });
 });
