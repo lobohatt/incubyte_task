@@ -6,6 +6,7 @@ import {
 
 import Home from '../views/home/index';
 import Header from '../components/molecules/Header/header';
+import Footer from '../components/molecules/Footer/index';
 
   const AppRouter = () => (
 <Router>
@@ -13,6 +14,7 @@ import Header from '../components/molecules/Header/header';
     <Routes>
     <Route path="/" Component={Home} />
   </Routes>
+  <Footer/>
 </Router>
   );
 

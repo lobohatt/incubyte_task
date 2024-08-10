@@ -1,19 +1,36 @@
 .header-banner {
     padding: 15px 0;
-    height: 200px;
-    background-color: rgb(239, 220, 241);
+    height: 21vh;
+    background-color: rgb(235, 245, 250);
+    background-image: linear-gradient(to left, rgb(255, 255, 255) , rgb(157, 255, 255));
     width: 100%;
+    border-bottom-color: white;
+    border-bottom: 20px;
+    background-size: cover;
   }
                           
   .header-cont{
     width: 100%;
-    display: flex;
+    display: flex;  
     margin-top: 30px;
+    justify-content: right;
+    padding-right: 40px;
   }
 
   .header-cont img {
     height: 80px;
-    margin: auto;
   }                                     
 
+  @media (max-width: 768px) {
+    .header-banner  {
+      width: 80%; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-banner  {
+      width: 100%; 
+    }
+  }
+  
                                   
