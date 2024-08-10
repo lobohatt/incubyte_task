@@ -15,17 +15,26 @@ const Home = () => {
     };
 
     
-     const onhandleSubmit = (e) =>{
-        e.preventDefault();
-        console.log(calculator.add(`${userData.userinput}`));
-        console.log(userData.userinput)
-        Swal.fire({
-            title: `Output : ${calculator.add(`${userData.userinput}`)}`,
-            icon:  calculator.add(`${userData.userinput}`).toString().includes("negative") ? "error" : "success",
-            confirmButtonText: 'Want to Try another'
-          })
-          setuserData({userinput:''})
-     };
+    const onhandleSubmit = (e) => {
+        e.preventDefault();  // Prevents the default form submission
+        try {
+            const result = calculator.add(userData.userinput);
+            Swal.fire({
+                title: `Output : ${result}`,
+                icon: result.toString().includes("negative") ? "error" : "success",
+                confirmButtonText: 'Want to Try another'
+            });
+            setuserData({ userinput: '' });
+        } catch (error) {
+            console.error('Error during form submission:', error);
+            Swal.fire({
+                title: 'An error occurred',
+                text: 'Please try again later.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        }
+    };
 
     const calculator = new Stringcal();
 
